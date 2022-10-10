@@ -1,160 +1,193 @@
+/* Added padding marging to 0 because browsers automatically add padding and margin */
 body {
-  margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
-.header {
+/* Made Flexbox for my children .Navlinks and .Navlogo */
+/* I used space-between so they appear at the ends of the flexbox */
+.NavBar {
+  background-color: #1f2937;
   display: flex;
   justify-content: space-between;
-  padding: 15px;
   align-items: center;
-  background-color: #1f2937;
+}
+/*Since they are links i used display:flex to make sure they go horizontally  */
+/* Added padding so they have a lil bit more space */
+/* Added gap so the boxes are a little bit farther apart  */
+.NavLinks,
+.NavLogo {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  font-size: 20px;
+}
+.NavLogo {
+  margin-left: 10rem;
+}
+.NavLinks {
+  margin-right: 10rem;
+}
+/* removes the numbers/bullet points */
+ul {
+  list-style: none;
   color: white;
 }
-
-nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  font-size: 20px;
-  font-weight: 600;
-}
-
+/* removes the underline on links */
 a {
   text-decoration: none;
   color: white;
 }
 
-.topcontent {
+h1 {
+  font-size: 77px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 25px;
+}
+
+.FirstSection {
   display: flex;
   justify-content: center;
   background-color: #1f2937;
+  gap: 5em;
   color: white;
 }
-.box1,
-.box2 {
-  width: 400px;
-  padding: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 20px;
+
+.FirstSectionLeftBox,
+.FirstSectionRightBox {
+  flex: 1;
+  height: 300px;
 }
 
-.box2 {
-  display: flex;
-  background-color: gray;
-  justify-content: center;
-  align-items: center;
+.FirstSectionLeftBox {
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-bottom: 10rem;
 }
 
-.logo {
-  font-size: 30px;
-  font-weight: 900;
+.FirstSectionRightBox {
+  margin-top: 5rem;
+  margin-right: 10rem;
+  margin-bottom: 5rem;
 }
-h1 {
-  font-size: 50px;
+
+.FirstSectionSubtext {
   margin: 0;
+  padding: 0;
+  margin-bottom: 0.5em;
 }
 
-#awesome {
-  font-size: 50px;
+button {
+  font-size: 25px;
   font-weight: 700;
-}
-
-.signup {
-  background-color: #3882f6;
   color: white;
-  margin-top: 15px;
-  font-size: 15px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 2em;
-  font-weight: 800;
-}
-
-.midinfo {
-  text-align: center;
-  font-size: 35px;
-  font-weight: 700;
-  padding: 40px;
-}
-
-.textimage {
-  width: 200px;
-  height: 200px;
-  border: 3px solid #3882f6;
+  background-color: #3882f6;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
   border-radius: 1em;
 }
 
-.midcontent {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+.SecondSection {
+  background-color: white;
   text-align: center;
 }
 
-.controltext {
-  width: 200px;
+.SecondSectionTitle {
+  font-weight: 700;
+  font-size: 50px;
 }
 
-.lowercontent {
+.SecondSectionBox {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.imlost {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 250px;
+  margin-bottom: 10rem;
+}
+.imlost img {
+  border: 3px solid #1f2937;
+  border-radius: 1rem;
+}
+
+.Footer {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 2rem;
+  background-color: #1f2937;
+  color: white;
+}
+
+.ThirdSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-style: italic;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #e5e7eb;
 }
 
-.quotebox {
-  font-size: 30px;
-  padding: 100px;
-  font-style: italic;
-  margin-left: 200px;
-  margin-right: 200px;
+.ThirdSection p {
+  font-size: 40px;
+  padding-top: 1rem;
 }
 
-.signupcontent {
+.FourthSection {
   display: flex;
   justify-content: center;
-  padding: 100px;
-  color: white;
-}
-
-.bluebox {
-  background-color: #3882f6;
-  display: flex;
-  padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 1em;
   justify-items: center;
-  align-items: center;
-  gap: 100px;
 }
 
-.signupbottom {
-  color: white;
-  background-color: #3882f6;
-  border: 3px solid white;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 0.5em;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.footer {
+.isuck {
   display: flex;
-  text-align: center;
-  justify-content: center;
-  padding: 50px;
-  background-color: #1f2937;
+  background-color: #3882f6;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  gap: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.ButtonTwo {
+  border: 2px solid white;
+}
+
+.FourthSectionLeft {
   color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.actiontitle {
+  border: 1px solid red;
+}
+
+.text1 {
+  font-weight: 700;
+  font-size: 30px;
 }
